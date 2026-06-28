@@ -17,9 +17,10 @@
     <meta name="author" content="QR Studio">
 
     <!-- SEO Meta -->
-    <title>QR Studio – Premium QR Code Generator</title>
+    <title>Free QR Code Generator – No Sign-Up Required | QR Studio</title>
     <meta name="description"
-        content="Create beautiful, customizable QR codes instantly with QR Studio — a professional-grade QR code generator for designers, marketers, and businesses. Free, fast, and feature-rich.">
+        content="Create beautiful, customizable QR codes instantly — 100% free, no sign-up required. Generate QR codes for URLs, WiFi, vCards, email, and more. Download as PNG, SVG, or JPEG. Fast, professional, and feature-rich.">
+    <meta name="keywords" content="free qr code generator, qr code generator no sign up, qr code maker, create qr code, custom qr code, qr code for url, wifi qr code, vcard qr code, qr code download">
     <link rel="canonical" href="https://qrstudio.website/">
 
     <!-- Favicon System -->
@@ -34,23 +35,58 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://qrstudio.website/">
-    <meta property="og:title" content="QR Studio – Premium QR Code Generator">
+    <meta property="og:title" content="Free QR Code Generator – No Sign-Up Required | QR Studio">
     <meta property="og:description"
-        content="Create beautiful, customizable QR codes instantly with a professional-grade generator. Free, fast, and feature-rich.">
+        content="Create beautiful, customizable QR codes instantly — 100% free, no sign-up required. Generate QR codes for URLs, WiFi, vCards, and more. Download as PNG, SVG, or JPEG.">
     <meta property="og:image" content="https://qrstudio.website/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="QR Studio – Premium QR Code Generator">
+    <meta property="og:image:alt" content="QR Studio – Free QR Code Generator">
     <meta property="og:site_name" content="QR Studio">
     <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="QR Studio – Premium QR Code Generator">
+    <meta name="twitter:title" content="Free QR Code Generator – No Sign-Up Required | QR Studio">
     <meta name="twitter:description"
-        content="Create beautiful, customizable QR codes instantly with a professional-grade generator. Free, fast, and feature-rich.">
+        content="Create beautiful, customizable QR codes instantly — 100% free, no sign-up required. Generate QR codes for URLs, WiFi, vCards, and more.">
     <meta name="twitter:image" content="https://qrstudio.website/og-image.png">
-    <meta name="twitter:image:alt" content="QR Studio – Premium QR Code Generator">
+    <meta name="twitter:image:alt" content="QR Studio – Free QR Code Generator">
+
+    <!-- Structured Data / Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "QR Studio",
+      "url": "https://qrstudio.website/",
+      "description": "Free, professional-grade QR code generator. Create customizable QR codes for URLs, WiFi, vCards, email, and more. No sign-up required.",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "QR codes for URLs",
+        "WiFi QR codes",
+        "vCard QR codes",
+        "Email QR codes",
+        "SMS QR codes",
+        "Custom colors and logos",
+        "Download as PNG, SVG, JPEG",
+        "No sign-up required",
+        "Dark mode support"
+      ],
+      "screenshot": "https://qrstudio.website/og-image.png",
+      "creator": {
+        "@type": "Organization",
+        "name": "QR Studio",
+        "url": "https://qrstudio.website/"
+      }
+    }
+    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -7436,11 +7472,11 @@
                         <option value="pro">Pro Plan</option>
                         <option value="business">Business Plan</option>
                     </select>
-                    <input type="text" id="pm-activate-order" placeholder="Lemon Squeezy Order #" maxlength="40">
+                    <input type="text" id="pm-activate-order" placeholder="Gumroad Order #" maxlength="40">
                     <button class="pricing-modal-activate-btn" id="pm-activate-btn"
                         onclick="QRPricing.activateWithOrder()">Activate</button>
                 </div>
-                <div class="pricing-modal-activate-note">Paste your Lemon Squeezy order number to unlock your plan
+                <div class="pricing-modal-activate-note">Paste your Gumroad order number to unlock your plan
                     instantly.</div>
             </div>
         </div>
@@ -7459,10 +7495,9 @@
             window.QRPricing = {
                 PLAN_KEY: 'qrstudio_plan',
                 CHECKOUT_URLS: {
-                    pro: 'https://qrstudioweb.lemonsqueezy.com/checkout/buy/12caf3fb-de9b-4d8e-a212-f258ece5c4ae',
-                    business: 'https://qrstudioweb.lemonsqueezy.com/checkout/buy/1759a57b-2301-4109-a87a-de6c1705d3fa'
+                    pro: 'https://studioweb.gumroad.com/l/pgnvrq?tier=Pro',
+                    business: 'https://studioweb.gumroad.com/l/pgnvrq?tier=Business'
                 },
-                PRODUCT_IDS: { pro: 966990, business: 967011 },
                 FREE_SAVE_LIMIT: 3,
 
                 _modalPlan: 'pro',
@@ -7492,7 +7527,7 @@
                 canSaveMore() { return true; },
                 getMaxExportSize() { return 2048; },
 
-                // Open Lemon Squeezy checkout
+                // Open Gumroad checkout
                 openCheckout(plan) {
                     const url = this.CHECKOUT_URLS[plan];
                     if (url) {
