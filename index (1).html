@@ -7472,11 +7472,11 @@
                         <option value="pro">Pro Plan</option>
                         <option value="business">Business Plan</option>
                     </select>
-                    <input type="text" id="pm-activate-order" placeholder="Lemon Squeezy Order #" maxlength="40">
+                    <input type="text" id="pm-activate-order" placeholder="Gumroad Order #" maxlength="40">
                     <button class="pricing-modal-activate-btn" id="pm-activate-btn"
                         onclick="QRPricing.activateWithOrder()">Activate</button>
                 </div>
-                <div class="pricing-modal-activate-note">Paste your Lemon Squeezy order number to unlock your plan
+                <div class="pricing-modal-activate-note">Paste your Gumroad order number to unlock your plan
                     instantly.</div>
             </div>
         </div>
@@ -7495,10 +7495,9 @@
             window.QRPricing = {
                 PLAN_KEY: 'qrstudio_plan',
                 CHECKOUT_URLS: {
-                    pro: 'https://qrstudioweb.lemonsqueezy.com/checkout/buy/12caf3fb-de9b-4d8e-a212-f258ece5c4ae',
-                    business: 'https://qrstudioweb.lemonsqueezy.com/checkout/buy/1759a57b-2301-4109-a87a-de6c1705d3fa'
+                    pro: 'https://studioweb.gumroad.com/l/pgnvrq?tier=Pro',
+                    business: 'https://studioweb.gumroad.com/l/pgnvrq?tier=Business'
                 },
-                PRODUCT_IDS: { pro: 966990, business: 967011 },
                 FREE_SAVE_LIMIT: 3,
 
                 _modalPlan: 'pro',
@@ -7528,7 +7527,7 @@
                 canSaveMore() { return true; },
                 getMaxExportSize() { return 2048; },
 
-                // Open Lemon Squeezy checkout
+                // Open Gumroad checkout
                 openCheckout(plan) {
                     const url = this.CHECKOUT_URLS[plan];
                     if (url) {
